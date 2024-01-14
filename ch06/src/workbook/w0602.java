@@ -11,6 +11,8 @@ public class w0602 {
 }
 
 class SutdaCard {
+	int num;
+	boolean isKwang;
 	
 	SutdaCard() {
 		this(1, true);
@@ -21,10 +23,7 @@ class SutdaCard {
 		this.isKwang = isKwang;
 	}
 	
-	int num;
-	boolean isKwang;
-	
 	String info() {
-		return isKwang ? num+"K" : ""+num;
+		return isKwang ? num+"K" : num+"";
 	}
 }

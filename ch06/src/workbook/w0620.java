@@ -5,17 +5,20 @@ import java.util.Arrays;
 public class w0620 {
 
 	static int[] shuffle(int[] arr) {
-		int[] answer = Arrays.copyOf(arr, arr.length);
 		
-		for(int i=0; i<answer.length; i++) {
-			int num = (int)(Math.random() * answer.length);
+		// 유효성 체크 
+		if(arr==null || arr.length==0)
+			return arr;
+		
+		for(int i=0; i<arr.length; i++) {
+			int j = (int)(Math.random() * arr.length);
 			
-			int tmp = answer[i];
-			answer[i] = answer[num];
-			answer[num] = tmp;
+			int tmp = arr[i];
+			arr[i] = arr[j];
+			arr[j] = tmp;
 		}
 		
-		return answer;
+		return arr;
 	}
 	
 	public static void main(String[] args) {

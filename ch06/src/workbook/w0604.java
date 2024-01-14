@@ -30,5 +30,6 @@ class Student2 {
 	
 	double getAverage() {
 		return (double) Math.round((double)this.getTotal() / 3 * 10) / 10;
+		// (int)(getTotal() / 3f * 10 + 0.5f) / 10f;
 	}
 }

@@ -30,7 +30,7 @@ class MyTv {
 	final int MIN_CHANNEL = 1;
 	
 	void turnOnOff() {
-		isPowerOn = isPowerOn ? false : true;
+		isPowerOn = !isPowerOn;
 	}
 	
 	void volumeUp() {
